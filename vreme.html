@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vreme</title>
+  <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fff;
+    }
+    .top {
+        text-align: center;
+        font-size: 2em;
+        color: #222;
+        margin-top: 2em;
+    }
+    .iframe-row {
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+    }
+    .iframe-row iframe {
+        flex: 1;
+        width: 100%;
+    }
+    @media (max-width: 600px) {
+        .iframe-row {
+            flex-direction: column;
+        }
+    }
+  </style>
+</head>
+<body>
+    <iframe src="https://vreme.arso.gov.si/widget/?&loc=Ljubljana" style="border:0; height: 185px; width: 100%; flex: 1;"></iframe>
+    <iframe src="https://vreme.arso.gov.si/widget/?&loc=Kranj" style="border:0; height: 185px; width: 100%; flex: 1;"></iframe>
+    <div class="iframe-row">
+      <iframe src="https://www.yr.no/en/content/2-3196359/table.html" style="border:0; height: 600px;"></iframe>
+      <iframe src="https://www.yr.no/en/content/2-3197378/table.html" style="border:0; height: 600px;"></iframe>
+    </div>
+</body>
+</html>
