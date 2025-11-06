@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             background: #fff;
         }
+        iframe { border: 0; }
         .top {
             text-align: center;
             font-size: 2em;
@@ -22,9 +23,12 @@
         }
         .iframe-row iframe {
             flex: 1;
-            width: 100%;
             height: 510px;
             min-height: 510px;
+        }
+        .history-row iframe {
+            height: 1780px;
+            min-height: 1780px;
         }
         .card-iframe {
             display: none;
@@ -48,13 +52,20 @@
     </style>
 </head>
 <body>
-    <iframe src="https://vreme.arso.gov.si/widget/?&loc=Ljubljana" style="border:0; height: 185px; width: 100%; flex: 1;"></iframe>
-    <iframe src="https://vreme.arso.gov.si/widget/?&loc=Kranj" style="border:0; height: 185px; width: 100%; flex: 1;"></iframe>
+    <h1 style="text-align:center; margin:1em 0 0.5em; font-size:2.2em;">Vremenska napoved</h1>
+    <iframe src="https://vreme.arso.gov.si/widget/?&loc=Ljubljana" style="height: 185px; width: 100%; flex: 1;"></iframe>
+    <iframe src="https://vreme.arso.gov.si/widget/?&loc=Kranj" style="height: 185px; width: 100%; flex: 1;"></iframe>
     <div class="iframe-row">
-        <iframe src="https://www.yr.no/en/content/2-3196359/table.html" style="border:0;"></iframe>
-        <iframe src="https://www.yr.no/en/content/2-3197378/table.html" style="border:0;"></iframe>
+        <iframe src="https://www.yr.no/en/content/2-3196359/table.html"></iframe>
+        <iframe src="https://www.yr.no/en/content/2-3197378/table.html"></iframe>
     </div>
-    <iframe class="card-iframe" src="https://www.yr.no/en/content/2-3196359/card.html" style="border:0;"></iframe>
-    <iframe class="card-iframe" src="https://www.yr.no/en/content/2-3197378/card.html" style="border:0;"></iframe>
+    <iframe class="card-iframe" src="https://www.yr.no/en/content/2-3196359/card.html"></iframe>
+    <iframe class="card-iframe" src="https://www.yr.no/en/content/2-3197378/card.html"></iframe>
+    <h1 style="text-align:center; margin:1em 0 0.5em; font-size:2.2em;">Zgodovina</h1>
+    <div class="iframe-row history-row">
+        <iframe src="https://meteo.arso.gov.si/uploads/probase/www/observ/surface/text/sl/observation_LJUBL-ANA_BEZIGRAD_history.html" style="margin-top: 18px; width: 950px; max-width: 100%;"></iframe>
+        <iframe src="https://meteo.arso.gov.si/uploads/probase/www/observ/surface/text/sl/observationAms_KRANJ_history.html" style="width: 650px;"></iframe>
+    </div>
+    <iframe src="https://meteo.arso.gov.si/uploads/probase/www/observ/surface/text/sl/observationAms_LJUBL-ANA_BRNIK_history.html" style="margin-top: 18px; width: 1605px; max-width: 100%; height: 8350px;"></iframe>
 </body>
 </html>
